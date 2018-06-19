@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ul { list-style: none; }
+		.top-area { height: 200px; }
+		nav{ height: 50px;background: #9e9e9e; }
+		nav .menu-item { display: inline-block; margin-left: 20px; cursor: pointer; padding: 10px 0; }
+		.sticky { position: fixed; top: 0; width: 100%; }
+		.dropdown { position: absolute; visibility: hidden; padding: 0; background-color: grey; cursor: pointer; }
+		.dropdown li { margin-top: 10px; padding: 3px; color: #fff; border-bottom: 1px solid #fff; }
+		.dropdown #level3 { visibility: hidden; background: green; color: #000; }
+
+.tab {overflow: hidden; border: 1px solid #ccc; background-color: #f1f1f1; }
+/* Style the buttons that are used to open the tab content */
+.tab button {background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s; }
+/* Change background color of buttons on hover */
+.tab button:hover {background-color: #ddd; }
+/* Create an active/current tablink class */
+.tab button.active {background-color: #ccc; }
+/* Style the tab content */
+.tabcontent {/*display: none;*/ padding: 6px 12px; border: 1px solid #ccc; border-top: none; }
+/*.tabs{ display: none; }*/
+</style>
+</body>
+
+<header>
+	<div class="top-area"></div>
+	<nav id="navbar">
+		<ul>
+			<li class="menu-item">Navigationbar</li>
+			<li class="menu-item">kids</li>
+			<li class="menu-item">Men</li>
+			<li class="menu-item" onMouseOver="show_dropdown()" onMouseOut="hide_dropdown()">Women
+				<ul class="dropdown" id="level2">
+					<li>shirits</li>
+					<li onMouseOver="show_dropdown2()" onMouseOut="hide_dropdown2()">jeans
+						<ul class="dropdown" id="level3">
+						<li>levis jeans</li>
+						<li>cloth jeans</li>
+					</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header><br>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity('tab1')">London</button>           <!--  passing "tab1" string to fn -->
+  <button class="tablinks" onclick="openCity('tab2')">Paris</button>
+  <button class="tablinks" onclick="openCity('tab3')">Tokyo</button>
+</div>
+<!-- Tab content -->
+<div>
+<div id="London" class="tabcontent"> 
+  <h3>London</h3>
+  <p id="tab1">Onclick of london content will come from object</p>
+</div> 
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p id="tab2" class="tabs">Onclick of Paris content will come from object</p> 
+</div>
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p id="tab3" class="tabs">Onclick of Tokyo content will come from object</p>
+</div>
+</div><br>
+<div>
+
+<button class="button1" onclick="button1()">Question 1</button>
+<button class="button2" onclick="button2()">Question 2</button>
+</div><br>
+
+
+<div>
+	<input type="text" id="i1" value=""></input>
+	<input type="text" id="i2" value=""></input>
+	<button class="button3" onclick="button3()">find min </button>
+</div><br>
+
+<div>
+		<button class="button4" onclick="primNumber()">check console for prime numbers</button>
+		<p id="demo"></p>
+</div>
+
+<div>
+		<button class="button6" onclick="fdeclare()">function declaration</button>
+		<button class="button6_1" onclick="dexpression()"> functionexpression</button>
+		<p id="demo"></p>
+</div>
+
+<div>
+		
+		<button class="button7" onclick="multiplenumber()">click for multiplication</button>
+		<p id="demo2">multiply </p>
+
+Pure Function<br> 	
+		<button class="button8" onclick="todaysDate()">todays date</button><br><p id="p1"></p>
+		<input type="text" id="age" placeholder="enter your age"> </input><br>
+		<button class="button8" onclick="AgeCheck()">age check</button><br>
+		<button class="button8" onclick="AgeCheck_ternary(65)">age check by ternary operator</button><br>
+		<button class="button8" onclick="addition(5,5)">addition of numbers</button><br>
+		<button class="button8" onclick="bgchangeaspertime()">click to change bg as per time</button><br>
+		<p id="p2"></p>
+			
+</div>
+<div>
+		<button class="button8" onclick="palindrome()">click & check console for palindrome</button>
+</div><br>
+
+<div>
+<button class="button11" onclick="maxNumber()">max number in array</button>
+<button class="button11" onclick="minNumber()">min number in array</button>
+</div><br>
+<div>
+	<input type="text" value="" id="fib"></input>
+<button class="" onclick="fibonacci()">fibonacci series</button><br>
+</div><br>
+
+
+<div>
+	<h1>Check Console</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+<div>	
+	<h1>Lorem Ipsum</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+<div>
+	<h1>Lorem Ipsum</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+<div>
+	<h1>Lorem Ipsum</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+<div>
+	<h1>Lorem Ipsum</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+<div>
+	<h1>Lorem Ipsum</h1>
+  <p>
+Using lorem ipsum to focus attention on graphic elements in a webpage design proposal
+In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content (also called greeking). Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.</p>
+
+</div>
+
+
+
+</body>
+<script src="js/script.js"></script>
+</body>
+</html>
